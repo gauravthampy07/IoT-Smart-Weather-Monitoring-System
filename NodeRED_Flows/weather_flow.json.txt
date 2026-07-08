@@ -1,0 +1,1827 @@
+[
+    {
+        "id": "45bee05065ada143",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5a1f2737112674ee",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 180,
+        "wires": [
+            [
+                "ba5c8e66fc81ac2f",
+                "58b4face5f5e578b",
+                "8ef33b0402b218fe"
+            ]
+        ]
+    },
+    {
+        "id": "ba5c8e66fc81ac2f",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "58b4face5f5e578b",
+        "type": "ui_gauge",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "b0bcea738aae173e",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 870,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7b085bb5c3a31db0",
+        "type": "ui_gauge",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "b0bcea738aae173e",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f3a015a1a2b5ab2f",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/humidity",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "427c3748f983af27",
+                "7b085bb5c3a31db0",
+                "550a20cd6a5b9fea"
+            ]
+        ]
+    },
+    {
+        "id": "427c3748f983af27",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7334a52f8101758f",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/pressure",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 480,
+        "wires": [
+            [
+                "3fb35548be1d0a47",
+                "0aa3945a34401b41",
+                "581e4c012a658078"
+            ]
+        ]
+    },
+    {
+        "id": "3fb35548be1d0a47",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0aa3945a34401b41",
+        "type": "ui_gauge",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "b0bcea738aae173e",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Pressure",
+        "label": "hPa",
+        "format": "{{value}}",
+        "min": "950",
+        "max": "1050",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 820,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b3e78f8c19578a4e",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/airquality",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "7597c7493a5ce6a7",
+                "34a56b95557747ce"
+            ]
+        ]
+    },
+    {
+        "id": "7597c7493a5ce6a7",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f34c08806054a781",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/rainstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 840,
+        "wires": [
+            [
+                "8c611c0ea5c7cb2d",
+                "964bf030adf9ad26"
+            ]
+        ]
+    },
+    {
+        "id": "8c611c0ea5c7cb2d",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "f293f2529e9dbfe9",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/pressurestatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 660,
+        "y": 1000,
+        "wires": [
+            [
+                "6f3230915543662d",
+                "41432683b2ddee7f"
+            ]
+        ]
+    },
+    {
+        "id": "6f3230915543662d",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "8ef33b0402b218fe",
+        "type": "ui_chart",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "f93ccbb51b7ff4b1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Trend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "550a20cd6a5b9fea",
+        "type": "ui_chart",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "f93ccbb51b7ff4b1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "HumidityTrend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "581e4c012a658078",
+        "type": "ui_chart",
+        "z": "45bee05065ada143",
+        "name": "",
+        "group": "f93ccbb51b7ff4b1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Pressure Trend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "950",
+        "ymax": "1050",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d5c5f74ca318087",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/dhtstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 1180,
+        "wires": [
+            [
+                "3dd4084b960b4bde",
+                "c17ad23a8d12b0b2"
+            ]
+        ]
+    },
+    {
+        "id": "3dd4084b960b4bde",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "3a5efbdde8c7c4a7",
+        "type": "ui_text",
+        "z": "45bee05065ada143",
+        "group": "9f6276c4029f8e04",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DHT sensor status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "8ca1041e6c4a96c2",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/mqstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 1360,
+        "wires": [
+            [
+                "55cb3eec25c8fc6d",
+                "75ab5c39b54ae89a"
+            ]
+        ]
+    },
+    {
+        "id": "55cb3eec25c8fc6d",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "af3e322d2a15f0c7",
+        "type": "ui_text",
+        "z": "45bee05065ada143",
+        "group": "9f6276c4029f8e04",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MQ sensor status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1130,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "88fba6cb223f1a99",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/rainsensorstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 670,
+        "y": 1520,
+        "wires": [
+            [
+                "62d6d8f25a6ee0e4",
+                "2952aba78859d62d"
+            ]
+        ]
+    },
+    {
+        "id": "62d6d8f25a6ee0e4",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "45a1da04c90b668d",
+        "type": "ui_text",
+        "z": "45bee05065ada143",
+        "group": "9f6276c4029f8e04",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rain sensor status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1150,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5c6d39706239bd05",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/systemstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 660,
+        "y": 1680,
+        "wires": [
+            [
+                "8d8a281aa770e841",
+                "7b52bb16e9efe434"
+            ]
+        ]
+    },
+    {
+        "id": "8d8a281aa770e841",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "447c8eb29f17a23a",
+        "type": "ui_text",
+        "z": "45bee05065ada143",
+        "group": "9f6276c4029f8e04",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "System status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1160,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "c17ad23a8d12b0b2",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "Status checker",
+        "func": "if(msg.payload == \"OK\")\n{\n    msg.payload = \"🟢 OK\";\n}\nelse\n{\n    msg.payload = \"🔴 FAULT\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1180,
+        "wires": [
+            [
+                "3a5efbdde8c7c4a7"
+            ]
+        ]
+    },
+    {
+        "id": "75ab5c39b54ae89a",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "Status checker",
+        "func": "if(msg.payload == \"OK\")\n{\n    msg.payload = \"🟢 OK\";\n}\nelse\n{\n    msg.payload = \"🔴 FAULT\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 1360,
+        "wires": [
+            [
+                "af3e322d2a15f0c7"
+            ]
+        ]
+    },
+    {
+        "id": "2952aba78859d62d",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "Status checker",
+        "func": "if(msg.payload == \"OK\")\n{\n    msg.payload = \"🟢 OK\";\n}\nelse\n{\n    msg.payload = \"🔴 FAULT\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1520,
+        "wires": [
+            [
+                "45a1da04c90b668d"
+            ]
+        ]
+    },
+    {
+        "id": "7b52bb16e9efe434",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "Status checker",
+        "func": "if(msg.payload == \"HEALTHY\")\n{\n    msg.payload = \"🟢 HEALTHY\";\n}\nelse\n{\n    msg.payload = \"🔴 CHECK SYSTEM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1680,
+        "wires": [
+            [
+                "447c8eb29f17a23a"
+            ]
+        ]
+    },
+    {
+        "id": "543ffd597eec8a0e",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/airquality",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 2040,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "2b18038977297347",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/rainstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 2100,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "12c55e0ab4848bc2",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/pressurestatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 2160,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "9bb27c64015183f0",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/pressure",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1980,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "e4247de489a4b8b5",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/humidity",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1920,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "1390b70fa7673811",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 1860,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "491098c18edb6797",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/systemstatus",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 2220,
+        "wires": [
+            [
+                "0927af96cff66af2"
+            ]
+        ]
+    },
+    {
+        "id": "0927af96cff66af2",
+        "type": "join",
+        "z": "45bee05065ada143",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "",
+        "count": "7",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 2020,
+        "wires": [
+            [
+                "e7f14ca3b6a98990"
+            ]
+        ]
+    },
+    {
+        "id": "e7f14ca3b6a98990",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "Full Weather SQL",
+        "func": "let d = msg.payload;\n\nlet now = new Date().toISOString();\n\nmsg.topic = `\nINSERT INTO weather_data_v2\n(\ntimestamp,\ntemperature,\nhumidity,\npressure,\nairquality,\nrainstatus,\npressurestatus,\nsystemstatus\n)\nVALUES\n(\n'${now}',\n${d[\"weather/temperature\"]},\n${d[\"weather/humidity\"]},\n${d[\"weather/pressure\"]},\n'${d[\"weather/airquality\"]}',\n'${d[\"weather/rainstatus\"]}',\n'${d[\"weather/pressurestatus\"]}',\n'${d[\"weather/systemstatus\"]}'\n);\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 2080,
+        "wires": [
+            [
+                "d4d2b624818c22aa",
+                "1223a7e5918f25e7"
+            ]
+        ]
+    },
+    {
+        "id": "d4d2b624818c22aa",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1210,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1223a7e5918f25e7",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "b85a5d16ca27f9ae",
+        "type": "inject",
+        "z": "45bee05065ada143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 450,
+        "y": 2400,
+        "wires": [
+            [
+                "3b15db7684f7236f"
+            ]
+        ]
+    },
+    {
+        "id": "de578a95189518a1",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 530,
+        "y": 2540,
+        "wires": [
+            [
+                "53509b0cd635c221"
+            ]
+        ]
+    },
+    {
+        "id": "3b15db7684f7236f",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 1",
+        "func": "msg.topic =\n\"SELECT ROUND(AVG(temperature),1) AS avg_temp FROM weather_data_v2;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 2480,
+        "wires": [
+            [
+                "de578a95189518a1"
+            ]
+        ]
+    },
+    {
+        "id": "53073b0805041eb6",
+        "type": "inject",
+        "z": "45bee05065ada143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 970,
+        "y": 2380,
+        "wires": [
+            [
+                "ddd7b8f387077f14"
+            ]
+        ]
+    },
+    {
+        "id": "5c025a86a61286bf",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1070,
+        "y": 2540,
+        "wires": [
+            [
+                "af2af2b8ea041026"
+            ]
+        ]
+    },
+    {
+        "id": "ddd7b8f387077f14",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 2",
+        "func": "msg.topic =\n\"SELECT MAX(temperature) AS max_temp FROM weather_data_v2;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2460,
+        "wires": [
+            [
+                "5c025a86a61286bf"
+            ]
+        ]
+    },
+    {
+        "id": "6b2b3d8ca98b3927",
+        "type": "inject",
+        "z": "45bee05065ada143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 2760,
+        "wires": [
+            [
+                "f0fffd1e9af62c13"
+            ]
+        ]
+    },
+    {
+        "id": "3631b0c03603a968",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 510,
+        "y": 2920,
+        "wires": [
+            [
+                "82861aef25b09b3a"
+            ]
+        ]
+    },
+    {
+        "id": "f0fffd1e9af62c13",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 3",
+        "func": "msg.topic =\n\"SELECT MIN(temperature) AS minTemp FROM weather_data_v2 WHERE temperature > 0;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 2840,
+        "wires": [
+            [
+                "3631b0c03603a968"
+            ]
+        ]
+    },
+    {
+        "id": "4380982fb206f470",
+        "type": "inject",
+        "z": "45bee05065ada143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1030,
+        "y": 2740,
+        "wires": [
+            [
+                "bb3220b45e1def5d"
+            ]
+        ]
+    },
+    {
+        "id": "5b18aa071f42688c",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1130,
+        "y": 2900,
+        "wires": [
+            [
+                "7819d114458e05db"
+            ]
+        ]
+    },
+    {
+        "id": "bb3220b45e1def5d",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 4",
+        "func": "msg.topic =\n\"SELECT COUNT(*) AS records FROM weather_data_v2;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 2820,
+        "wires": [
+            [
+                "5b18aa071f42688c"
+            ]
+        ]
+    },
+    {
+        "id": "2d2f1f7da61e0a57",
+        "type": "csv",
+        "z": "45bee05065ada143",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "once",
+        "multi": "mult",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 870,
+        "y": 3340,
+        "wires": [
+            [
+                "7c3d5b9acd1d92b4"
+            ]
+        ]
+    },
+    {
+        "id": "0578540647c05b3f",
+        "type": "inject",
+        "z": "45bee05065ada143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 850,
+        "y": 3120,
+        "wires": [
+            [
+                "463d96b68d1db106"
+            ]
+        ]
+    },
+    {
+        "id": "4d67ce366c1fc87b",
+        "type": "sqlite",
+        "z": "45bee05065ada143",
+        "mydb": "359ac83ba4150fbf",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 910,
+        "y": 3260,
+        "wires": [
+            [
+                "2d2f1f7da61e0a57"
+            ]
+        ]
+    },
+    {
+        "id": "463d96b68d1db106",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 5",
+        "func": "msg.topic = `\nSELECT *\nFROM weather_data_v2\nORDER BY id DESC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 3180,
+        "wires": [
+            [
+                "4d67ce366c1fc87b"
+            ]
+        ]
+    },
+    {
+        "id": "b407227ad66532f2",
+        "type": "debug",
+        "z": "45bee05065ada143",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 3340,
+        "wires": []
+    },
+    {
+        "id": "7c3d5b9acd1d92b4",
+        "type": "file",
+        "z": "45bee05065ada143",
+        "name": "",
+        "filename": "C:\\Users\\Lekshmi Girish\\Desktop\\weather_export.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1180,
+        "y": 3340,
+        "wires": [
+            [
+                "b407227ad66532f2"
+            ]
+        ]
+    },
+    {
+        "id": "82861aef25b09b3a",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 6",
+        "func": "msg.payload = msg.payload[0].minTemp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2980,
+        "wires": [
+            [
+                "9cc99fd51a426b65"
+            ]
+        ]
+    },
+    {
+        "id": "cdd72232ac5b219e",
+        "type": "mqtt in",
+        "z": "45bee05065ada143",
+        "name": "",
+        "topic": "weather/alert",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dd281e431402100a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 40,
+        "wires": [
+            [
+                "0abe1dc71c524a2b"
+            ]
+        ]
+    },
+    {
+        "id": "0abe1dc71c524a2b",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "a23833c6b7264321",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"\ncolor:white;\npadding:25px;\nborder-radius:10px;\ntext-align:center;\n\nbackground:\n{{msg.payload=='NORMAL' ? '#0a8f08' :\nmsg.payload=='AIR QUALITY POOR' ? '#ff9800' :\nmsg.payload=='HEAVY RAIN DETECTED' ? '#2196f3' :\n'#d32f2f'}};\n\">\n\n<div style=\"\nfont-size:42px;\nfont-weight:bold;\n\">\n{{msg.payload}}\n</div>\n\n<div style=\"\nfont-size:18px;\nmargin-top:8px;\n\">\nWeather Monitoring Alert System\n</div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1320,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2519e2c90ffab4f",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "0272221fedf7ce99",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"\nbackground:#1976d2;\ncolor:white;\npadding:15px;\nfont-size:32px;\nfont-weight:bold;\ndisplay:flex;\njustify-content:space-between;\nalign-items:center;\n\">\n\n    <div>🌦 Weather Station</div>\n\n    <div style=\"font-size:18px;\">\n        {{msg.payload}}\n    </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1240,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3bb5b89aa2d6df70",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "73d4223ef7da9828",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "format": "<div style=\"\nbackground:white;\nborder-radius:12px;\npadding:15px;\ntext-align:center;\n\">\n\n    <div style=\"\nfont-size:18px;\ncolor:#666;\n\">\n        🌡 Average Temp\n    </div>\n\n    <div style=\"\nfont-size:34px;\nfont-weight:bold;\ncolor:#2e7d32;\nmargin-top:10px;\n\">\n        {{msg.payload}} °C\n    </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 2660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b93fbfcca31eca0",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "73d4223ef7da9828",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "format": "<div style=\"\nbackground:white;\nborder-radius:12px;\npadding:15px;\ntext-align:center;\n\">\n\n    <div style=\"\nfont-size:18px;\ncolor:#666;\n\">\n        🔥 Maximum Temp\n    </div>\n\n    <div style=\"\nfont-size:34px;\nfont-weight:bold;\ncolor:#d32f2f;\nmargin-top:10px;\n\">\n        {{msg.payload}} °C\n    </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 2640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cc99fd51a426b65",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "73d4223ef7da9828",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "format": "<div style=\"\nbackground:white;\nborder-radius:12px;\npadding:15px;\ntext-align:center;\n\">\n\n    <div style=\"\nfont-size:18px;\ncolor:#666;\n\">\n        ❄ Minimum Temp\n    </div>\n\n    <div style=\"\nfont-size:34px;\nfont-weight:bold;\ncolor:#1976d2;\nmargin-top:10px;\n\">\n        {{msg.payload}} °C\n    </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 440,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7342e017ddd0c4b",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "73d4223ef7da9828",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "format": "<div style=\"\nbackground:white;\nborder-radius:12px;\npadding:15px;\ntext-align:center;\n\">\n\n    <div style=\"\nfont-size:18px;\ncolor:#666;\n\">\n        📊 Total Samples\n    </div>\n\n    <div style=\"\nfont-size:34px;\nfont-weight:bold;\ncolor:#673ab7;\nmargin-top:10px;\n\">\n        {{msg.payload}} \n    </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1100,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53509b0cd635c221",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 7",
+        "func": "msg.payload = msg.payload[0].avg_temp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2600,
+        "wires": [
+            [
+                "3bb5b89aa2d6df70"
+            ]
+        ]
+    },
+    {
+        "id": "af2af2b8ea041026",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 8",
+        "func": "msg.payload = msg.payload[0].max_temp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 2600,
+        "wires": [
+            [
+                "0b93fbfcca31eca0"
+            ]
+        ]
+    },
+    {
+        "id": "7819d114458e05db",
+        "type": "function",
+        "z": "45bee05065ada143",
+        "name": "function 9",
+        "func": "msg.payload = msg.payload[0].records;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 2960,
+        "wires": [
+            [
+                "d7342e017ddd0c4b"
+            ]
+        ]
+    },
+    {
+        "id": "34a56b95557747ce",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "c725875f88e7a016",
+        "name": "Air quality",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"margin-bottom:8px;font-weight:bold;\">\n    Air Quality\n</div>\n\n<div style=\"\npadding:10px;\nborder-radius:10px;\ntext-align:center;\nfont-weight:bold;\nfont-size:18px;\nbackground:\n{{msg.payload=='GOOD' ? '#c8e6c9' :\nmsg.payload=='MODERATE' ? '#ffe0b2' :\n'#ffcdd2'}};\n\">\n\n    {{msg.payload}}\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 900,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "964bf030adf9ad26",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "c725875f88e7a016",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"margin-bottom:8px;font-weight:bold;\">\n    Rain Status\n</div>\n\n<div style=\"\npadding:10px;\nborder-radius:10px;\ntext-align:center;\nfont-weight:bold;\nfont-size:18px;\nbackground:\n{{msg.payload=='NO RAIN' ? '#c8e6c9' :\nmsg.payload=='LIGHT' ? '#fff9c4' :\n'#bbdefb'}};\n\">\n\n    {{msg.payload}}\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41432683b2ddee7f",
+        "type": "ui_template",
+        "z": "45bee05065ada143",
+        "group": "c725875f88e7a016",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"margin-bottom:8px;font-weight:bold;\">\n    Pressure Status\n</div>\n\n<div style=\"\npadding:10px;\nborder-radius:10px;\ntext-align:center;\nfont-weight:bold;\nfont-size:18px;\nbackground:\n{{msg.payload=='NORMAL' ? '#c8e6c9' :\n'#ffe0b2'}};\n\">\n\n    {{msg.payload}}\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd281e431402100a",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "969aecc363e84e80be51f1e55de3c709.s1.eu.hivemq.cloud  Port: 8883",
+        "port": "8883",
+        "tls": "400cc20bc6af3a55",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b0bcea738aae173e",
+        "type": "ui_group",
+        "name": "Environment",
+        "tab": "1d2ee612c7309c5f",
+        "order": 3,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f93ccbb51b7ff4b1",
+        "type": "ui_group",
+        "name": "Trends",
+        "tab": "1d2ee612c7309c5f",
+        "order": 7,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9f6276c4029f8e04",
+        "type": "ui_group",
+        "name": "System Health",
+        "tab": "1d2ee612c7309c5f",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "359ac83ba4150fbf",
+        "type": "sqlitedb",
+        "db": "C:\\Users\\Lekshmi Girish\\Desktop\\weather.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "a23833c6b7264321",
+        "type": "ui_group",
+        "name": "System alerts",
+        "tab": "1d2ee612c7309c5f",
+        "order": 2,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0272221fedf7ce99",
+        "type": "ui_group",
+        "name": "Header",
+        "tab": "1d2ee612c7309c5f",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "73d4223ef7da9828",
+        "type": "ui_group",
+        "name": "Analytics",
+        "tab": "1d2ee612c7309c5f",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c725875f88e7a016",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "1d2ee612c7309c5f",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "400cc20bc6af3a55",
+        "type": "tls-config",
+        "name": "HiveMQ TLS",
+        "certType": "files",
+        "cert": "",
+        "key": "",
+        "p12": "",
+        "p12name": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "certEnv": "",
+        "keyEnv": "",
+        "caEnv": ""
+    },
+    {
+        "id": "1d2ee612c7309c5f",
+        "type": "ui_tab",
+        "name": "Weather Station",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ad2564347264912a",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-sqlite": "2.0.1"
+        }
+    }
+]
