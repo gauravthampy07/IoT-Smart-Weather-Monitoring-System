@@ -133,13 +133,13 @@ The IEEE-style conference paper describing this project is available in the **Pa
 ## Hardware Prototype
 
 <p align="center">
-  <img src="Images/hardware.png" width="700">
+  <img src="Dashboard/hardware.png" width="700">
 </p>
 
 ## Node-RED Dashboard
 
 <p align="center">
-  <img src="Images/dashboard.png" width="700">
+  <img src="Dashboard/dashboard.png" width="700">
 </p>
 
 ## Node-RED Flow
