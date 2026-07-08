@@ -133,7 +133,7 @@ The IEEE-style conference paper describing this project is available in the **Pa
 ## Hardware Prototype
 
 <p align="center">
-  <img src="Dashboard/hardware.png" width="700">
+  <img src="Hardware/hardware.png" width="700">
 </p>
 
 ## Node-RED Dashboard
