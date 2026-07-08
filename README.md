@@ -1,5 +1,12 @@
 # 🌦️ IoT Smart Weather Monitoring System
 
+![Platform](https://img.shields.io/badge/Platform-ESP32-blue)
+![Protocol](https://img.shields.io/badge/Protocol-MQTT-green)
+![Dashboard](https://img.shields.io/badge/Dashboard-Node--RED-red)
+![Database](https://img.shields.io/badge/Database-SQLite-orange)
+![Cloud](https://img.shields.io/badge/Cloud-HiveMQ-blueviolet)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-yellow)
+
 An IoT-based Smart Weather Monitoring and Analytics System developed using the **ESP32** microcontroller, multiple environmental sensors, **HiveMQ Cloud**, **MQTT**, **Node-RED**, and **SQLite**. The system continuously monitors weather conditions, stores historical data, provides real-time analytics, and generates intelligent alerts through a dashboard and local LCD display.
 
 ---
